@@ -2,7 +2,10 @@
  * Created by Evilina on 2016/3/19.
  */
 
+import java.io.File;
 import java.sql.*;
+import test.lucene.*;
+import test.lucene.preprocess.FilePreprocess;
 
 public class MysqlConnection {
     //jdbc driver name and database URL
@@ -20,7 +23,7 @@ public class MysqlConnection {
     static final String USER = "root";
     static final String PASS = "19941126";
 
-    public static void main(String[] args)
+    public static void connectionMysql()
     {
         Connection conn = null;
         Statement stmt = null;
@@ -95,6 +98,13 @@ public class MysqlConnection {
             }
         }
 
+    }
+
+    public static void main(String[] args)
+    {
+
+        //connectionMysql();
+        //new FilePreprocess().doIt();
     }
 
 }
